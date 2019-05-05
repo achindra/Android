@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AmrutamClinic.HomePage">
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Contact">
+        <StackLayout>
+            <!-- Place new controls here -->
+            <Label Text="अमृतम आयुर्वेद" Font="Bold,20" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+            <Image Source="dr_rishi_mishra.jpg"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"/>
+            <Label Text="PROMOTING HEALTH, WELLNESS, BEAUTY AND CURE."
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+            <Label Text="AUTHENTIC AYURVEDA AND WIDE RANGE OF INDIAN TRADITIONAL MASSAGES"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+            <StackLayout Padding="20,0,20,0" VerticalOptions="FillAndExpand">
+                <Label Text="Dr. Rishi Mishra practices pure Ayurveda and is a lecturer at Rajiv Gandhi Ayurveda College, Bhopal. He holds B.A.M.S from Govt. Ayurvedic College, Bhopal (Pt. Khushilal Sharma) and MD (Panchkarma) from Vikram University, Ujjain."
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"/>
+                <Label Text="Dr. Mishra, while practicing, observed significant efficacy of vitalization therapy of Ayurveda in several diseases like"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+                <Label Text="Physical diseases – Asthma, Arthritis (Oesteo and Rheumatoid), Psoriasis, Back pain, Sciatica, Cervical Spondalities, High and Low Blood Pressure, Diabetes, Infertility, Constipation, Hormonal disorder like PCOD, Obesity, Liver and Heart disorders, Frozen shoulder, Piles, Slip disc, Fistula, Hair fall, Hair loss, Pigmentation, Dark circles etc."
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+                <Label Text="Mental diseases – Anxiety, Depression, Numbness, Giddiness, Vertigo, etc."
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+                <!--Label Text=""
+                   HorizontalOptions="End"
+                   VerticalOptions="CenterAndExpand" /-->
+            </StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <!--maps:Map Grid.Row="0" /-->
+                <Grid Grid.Row="1"
+                  VerticalOptions="End"
+                  BackgroundColor="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+                        x:Name="BtnPhone"
+                        Text="☎Phone"
+                        Clicked="BtnPhone_Clicked"/>
+                    <Button Grid.Column="1"
+                        x:Name="BtnWhatsApp"
+                        Text="💬WhatsApp"
+                        Clicked="BtnWhatsApp_Clicked"/>
+                    <Button Grid.Column="2"
+                        x:Name="BtnAppointment"
+                        IsEnabled="False"
+                        Text="Appointment" />
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Clinic">
+        <StackLayout>
+            <Label Text="Therapy:
+ - Weight Loss
+ - Raktamokshana
+ - Basti
+ - Virechana
+ - Elements
+ - Vamana
+ - Oil Therapy
+ - KsharSutra
+ - Massage"
+               HorizontalOptions="Start"
+               VerticalOptions="Start" />
+            <Label Text="Diseases:
+ - Male Problems
+ - Female Problems
+ - Hair Problems
+ - Skin Problems
+ - Chronic Diseases"
+               HorizontalOptions="Start"
+               VerticalOptions="Start" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Health Tips">
+        <StackLayout x:Name="WebViewLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <WebView VerticalOptions="FillAndExpand "
+                 HorizontalOptions="FillAndExpand "
+                 Source="https://goo.gl/b9DLrF" />
+            <!--Source="{Binding VideoSource}" /-->
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

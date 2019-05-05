@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BhatnagarOrtho.HomePage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="संपर्क">
+        <StackLayout>
+            <!-- Place new controls here -->
+            <Label Text="भटनागर ऑर्थोपेडिक सेंटर" Font="Bold,20"
+           HorizontalOptions="Center"
+           VerticalOptions="Start" />
+            <Image Source="Bhais_and_Taai.jpg"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+            <Label Text="मेरी पूज्य मां, सुशीला देवी भटनागर की याद में।"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand" />
+            <StackLayout Padding="20,0,20,0" VerticalOptions="FillAndExpand">
+                <Label Text="इस ऍप के माध्यम से आप अपने या किसी बहुत गरीब" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Label Text=" 
+- परित्यक्त वरिष्ठजन हड्डीरोगी  &#10;
+- दिव्यांग (हड्डी) &#10;
+- पूर्व ऑपरेशन उपरांत पस ग्रस्त  &#10;
+- अन्य चिकित्सक द्वारा अंग भंग की सलाह प्राप्त  &#10;
+&#10;
+ऐसे रोगी की विस्तृत जानकारी भेज कर उचित सलाह या उपचार, चिकित्सक से मिलकर प्राप्त कर सकते है!"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+                <Label Text="&#10;आप मुझसे संपर्क करने के लिए, नीचे फोन या व्हाटएप बटन का उपयोग कर सकते हैं!"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"/>
+            </StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <!--maps:Map Grid.Row="0" /-->
+                <Grid Grid.Row="1"
+                  VerticalOptions="End"
+                  BackgroundColor="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+                        x:Name="BtnPhone"
+                        Text="☎Phone"
+                        Clicked="BtnPhone_Clicked"/>
+                    <Button Grid.Column="1"
+                        x:Name="BtnWhatsApp"
+                        Text="💬WhatsApp"
+                        Clicked="BtnWhatsApp_Clicked"/>
+                    <Button Grid.Column="2"
+                        x:Name="BtnAppointment"
+                        IsEnabled="False"
+                        Text="Appointment" />
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="सुविधाएं">
+        <ScrollView>
+        <StackLayout Padding="20,0,20,0" VerticalOptions="FillAndExpand">
+            <Label Text="भटनागर ऑर्थोपेडिक सेंटर" Font="Bold,20" HorizontalOptions="Center" VerticalOptions="Start" />
+            <Label Text="सुविधाएं उपलब्ध" HorizontalOptions="Center" VerticalOptions="Start" Font="Bold" />
+            <Label Text="
+- अस्थिरोग, फ्रैक्चर का संतोषप्रद उपचार &#10;
+- ऑपरेशन उपरांत पस या विकृति उपचार &#10;
+- वरिष्ठ जन हड्डी कमजोरी, फ्रैक्चर छोटे चीरे से उपचार &#10;
+- घुटने / कूल्हे गठिआ का (छोटी शल्यक्रिया द्वारा बिना जोड़ बदले उपचार) &#10;
+- सेरिब्रल पाल्सी ग्रस्त रोगिओं का उपचार &#10;
+- टेड़े बाके हाथ पाँव ( जन्म, चोट, शल्य या व्याधि से) को सामान्य बनाना &#10;
+- छोटे हाथ पाँव को सामान्य बनाना &#10;
+- छोटे कद को लम्बाई बड़ा कर सामान्य करना &#10;
+- ए वी एन ग्रस्त हड्डी का उपचार &#10;
+- हड्डी कैंसर परामर्श उपचार &#10;
+- विभिन्न क्लिष्टतम हड्डी रोग का उपचार या प्रामाणिक सलाह"
+               HorizontalOptions="Start"
+               VerticalOptions="StartAndExpand"/>
+                <Label Text="सेवाएं उपलब्ध" HorizontalOptions="Center" VerticalOptions="Start" Font="Bold" />
+                <Label Text="
+- बी ओ सी एप &#10;
+- परामर्श &#10;
+- परिक्षण &#10;
+- एक्स रे  &#10;
+- पैथोलॉजी कलेक्शन (जांच थायरोकेयर या अन्य प्रामाणिक / कम दर द्वारा) &#10;
+- दवाइया उचित दर सप्लाई सेवा  &#10;
+- प्लास्टर  &#10;
+- हड्डी बिठाकर प्लास्टर &#10;
+- ऑपरेशन प्लानिंग  &#10;
+- ऑपरेशन कार्यरूप  &#10;
+- फिजियोथेरेपी शिक्षित, अनुभवी फ़िज़ियोथेरेपिस्ट द्वारा"
+                    HorizontalOptions="Start" VerticalOptions="StartAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="क्लिनिक">
+        <StackLayout x:Name="WebViewLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <WebView VerticalOptions="FillAndExpand "
+                 HorizontalOptions="FillAndExpand "
+                 Source="https://goo.gl/m3Lbjk" />
+            <!--Source="{Binding VideoSource}" /-->
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

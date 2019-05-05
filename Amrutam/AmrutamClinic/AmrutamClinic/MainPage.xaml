@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AmrutamClinic"
+             x:Class="AmrutamClinic.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="सुशीला" Font="Bold,20"
+           HorizontalOptions="Center"
+           VerticalOptions="Start" />
+        <Image Source="AmrutamClinic.jpg"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+        <Label Text="मेरी पूज्य मां, सुशीला देवी भटनागर की याद में।"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand" />
+        <StackLayout Padding="20,0,20,0" VerticalOptions="FillAndExpand">
+            <Label Text="यह ऐप मुझे दूरस्थ गांवों में गरीब मरीजों तक पहुंचने में सक्षम बनाता है जिन्हें चिकित्सकीय ध्यान देने की आवश्यकता है।
+एक रोगी के रूप में, आप फोन या व्हाट्सएप के माध्यम से मुझसे जुड़ सकते हैं।
+मैं एक हड्डी रोग विशेषज्ञ हूं और निम्न समस्याओं में आपकी मदत कर सकता हूँ"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+            <Label Text="- ऑपरेशन के बाद पस अथवा विक्रती"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"/>
+            <Label Text="- दिव्यंग स्तती सुधार"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"/>
+            <Label Text="- फ्रैक्चर, जोड़ों में दर्द"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"/>
+            <Label Text="अगर आप घुटने / कूल्हे की गठिए से ग्रस्त हैं और जोड़ बदलवाने नहीं चाहते, छोटी शल्यक्रिया से उपचार चाहते हैं तो मुझसे सलाह मशवरा करने के लिए कृपया नीचे दिए गए बटन पर क्लिक करें।"
+               HorizontalOptions="End"
+               VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>                
+            <!--maps:Map Grid.Row="0" /-->
+            <Grid Grid.Row="1"
+                  VerticalOptions="End"
+                  BackgroundColor="LightGray">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+                        x:Name="BtnPhone"
+                        Text="☎Phone"
+                        Clicked="BtnPhone_Clicked"/>
+                <Button Grid.Column="1"
+                        x:Name="BtnWhatsApp"
+                        Text="💬WhatsApp"
+                        Clicked="BtnWhatsApp_Clicked"/>
+                <Button Grid.Column="2"
+                        x:Name="BtnAppointment"
+                        IsEnabled="False"
+                        Text="Appointment" />
+            </Grid>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
